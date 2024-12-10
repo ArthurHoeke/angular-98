@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+//TODO: replace with dist folder instead of library project
 import { ButtonComponent } from '../../../angular-98/src/lib/components/button/button.component';
 import { DialogComponent } from '../../../angular-98/src/lib/components/dialog/dialog.component';
 
