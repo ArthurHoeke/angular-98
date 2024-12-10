@@ -1,0 +1,5 @@
+@import '98.css/dist/98.css';
+
+.flex-end {
+    justify-content: flex-end;
+}

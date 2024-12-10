@@ -1,0 +1,20 @@
+<div class="window" [ngStyle]="{ width: width + 'px', margin: '32px' }" *ngIf="visible">
+    <div class="title-bar">
+        <div class="title-bar-text">
+            {{ title }}
+        </div>
+        <div class="title-bar-controls" *ngIf="showControls">
+            <button aria-label="Minimize" (click)="onMinimize()"></button>
+            <button aria-label="Maximize" (click)="onMaximize()"></button>
+            <button aria-label="Close" (click)="onClose()"></button>
+        </div>
+    </div>
+    <div class="window-body">
+        <p *ngIf="description">{{ description }}</p>
+        <ng-content></ng-content>
+        <section class="field-row flex-end" *ngIf="showConfirm || showCancel">
+            <button-98 *ngIf="showConfirm" (click)="onConfirm()" [primary]="true">{{confirmText}}</button-98>
+            <button-98 *ngIf="showCancel" (click)="onCancel()">{{cancelText}}</button-98>
+        </section>
+    </div>
+</div>
