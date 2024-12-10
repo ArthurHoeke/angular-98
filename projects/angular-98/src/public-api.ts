@@ -4,5 +4,8 @@
 
 export * from './lib/angular-98.service';
 export * from './lib/angular-98.component';
+
 export * from './lib/components/button/button.component';
 export * from './lib/components/dialog/dialog.component';
+export * from './lib/components/field-row/field-row.component';
+export * from './lib/components/checkbox/checkbox.component';

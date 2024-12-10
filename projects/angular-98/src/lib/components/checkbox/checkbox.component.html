@@ -1,2 +1,2 @@
-<input type="checkbox" [id]="id" [checked]="checked" [disabled]="disabled" aria-label="{{ label }}" />
+<input type="checkbox" [id]="id" [(ngModel)]="checked" [disabled]="disabled" (change)="onChange()" />
 <label [for]="id">{{ label }}</label>
