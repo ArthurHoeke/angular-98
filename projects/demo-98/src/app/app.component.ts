@@ -9,11 +9,15 @@ import { ButtonComponent } from 'angular-98';
 import { DialogComponent } from 'angular-98';
 import { CheckboxComponent } from 'angular-98';
 import { FieldRowComponent } from 'angular-98';
+import { OptionButtonComponent } from 'angular-98';
+
+import { GroupBoxComponent } from 'angular-98';
+import { ParagraphComponent } from 'angular-98';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule, ButtonComponent, DialogComponent, CheckboxComponent, FieldRowComponent],
+  imports: [RouterOutlet, CommonModule, FormsModule, ButtonComponent, DialogComponent, CheckboxComponent, FieldRowComponent, OptionButtonComponent, GroupBoxComponent, ParagraphComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
