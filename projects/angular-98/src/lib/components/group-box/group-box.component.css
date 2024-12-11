@@ -1,1 +1,7 @@
 @import '98.css/dist/98.css';
+
+legend {
+    font-family: "Pixelated MS Sans Serif", Arial;
+    -webkit-font-smoothing: none;
+    font-size: 11px;
+}

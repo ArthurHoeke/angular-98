@@ -13,11 +13,13 @@ import { OptionButtonComponent } from 'angular-98';
 
 import { GroupBoxComponent } from 'angular-98';
 import { ParagraphComponent } from 'angular-98';
+import { ContainerComponent } from 'angular-98';
+import { StatusBarComponent } from 'angular-98';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule, ButtonComponent, DialogComponent, CheckboxComponent, FieldRowComponent, OptionButtonComponent, GroupBoxComponent, ParagraphComponent],
+  imports: [RouterOutlet, CommonModule, FormsModule, StatusBarComponent, ButtonComponent, DialogComponent, CheckboxComponent, FieldRowComponent, OptionButtonComponent, GroupBoxComponent, ParagraphComponent, ContainerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -25,12 +27,14 @@ export class AppComponent {
   title = 'demo-98';
 
   public checkboxChecked = false;
+  public statusFields: string[] = [
+    'first field',
+    'second field',
+    'third field',
+    'fourth field'
+  ];
 
   onCheckedChange(event: boolean) {
     console.log('Checkbox changed:', event); // This will log true or false
-  }
-  
-  test() {
-    alert("asdf")
   }
 }

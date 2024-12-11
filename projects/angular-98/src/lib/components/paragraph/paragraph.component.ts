@@ -8,5 +8,4 @@ import { Component, Input } from '@angular/core';
   styleUrl: './paragraph.component.css'
 })
 export class ParagraphComponent {
-  @Input() text: string = '';
 }

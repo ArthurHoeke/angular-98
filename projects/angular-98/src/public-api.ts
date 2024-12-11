@@ -12,3 +12,5 @@ export * from './lib/components/checkbox/checkbox.component';
 export * from './lib/components/option-button/option-button.component';
 export * from './lib/components/group-box/group-box.component';
 export * from './lib/components/paragraph/paragraph.component';
+export * from './lib/components/container/container.component';
+export * from './lib/components/status-bar/status-bar.component';

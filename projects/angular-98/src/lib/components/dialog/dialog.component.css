@@ -3,3 +3,25 @@
 .flex-end {
     justify-content: flex-end;
 }
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.window {
+    position: absolute;
+}
+
+.title-bar {
+    cursor: move;
+}
+
+.mt-2 {
+    margin-top: 5px;
+}
