@@ -1,0 +1,43 @@
+<ul class="tree-view">
+    <ng-container *ngFor="let node of nodes">
+        <!-- Leaf node without children -->
+        <li *ngIf="!node.children">
+            {{ node.label }}
+        </li>
+
+        <!-- Parent node with children -->
+        <li *ngIf="node.children">
+            <details [open]="node.expanded">
+                <summary>{{ node.label }}</summary>
+                <ul>
+                    <ng-container *ngFor="let child of node.children">
+                        <!-- Render child nodes inline -->
+                        <li *ngIf="!child.children">
+                            {{ child.label }}
+                        </li>
+                        <li *ngIf="child.children">
+                            <details [open]="child.expanded">
+                                <summary>{{ child.label }}</summary>
+                                <ul>
+                                    <ng-container *ngFor="let grandChild of child.children">
+                                        <li *ngIf="!grandChild.children">{{ grandChild.label }}</li>
+                                        <li *ngIf="grandChild.children">
+                                            <details [open]="grandChild.expanded">
+                                                <summary>{{ grandChild.label }}</summary>
+                                                <ul>
+                                                    <ng-container *ngFor="let greatGrandChild of grandChild.children">
+                                                        <li>{{ greatGrandChild.label }}</li>
+                                                    </ng-container>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                    </ng-container>
+                                </ul>
+                            </details>
+                        </li>
+                    </ng-container>
+                </ul>
+            </details>
+        </li>
+    </ng-container>
+</ul>
